@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <nav> <!-- to define a set of navigation links.) -->
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </nav>
+
+        <main> <!--to enclose the main content of the web page. This section is unique to the page, and it contains the most important information that users came to see. It helps with SEO and accessibility by separating the main content from other elements like navigation and footer.) --> 
+            <section>
+                <h2>Introduction to HTML</h2>
+                <p>HTML is the standard language for creating web pages.</p>
+            </section>
+        </main>
+    <!-- 1. Định dạng ký tự (Mã hóa ngôn ngữ, giúp web không bị lỗi font Tiếng Việt/Tiếng Anh) -->
+    <meta charset="UTF-8">
+
+    <!-- 2. Cấu hình Responsive (Giúp giao diện tự động co giãn đẹp mắt trên điện thoại/máy tính) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 3. Mô tả website (Hiển thị thành đoạn văn ngắn khi tìm kiếm trên Google) -->
+    <meta name="description" content="Hệ thống tuyển dụng công nghệ giáo dục EdTech hàng đầu - Tìm kiếm cơ hội việc làm mơ ước của bạn tại đây.">
+
+    <!-- 4. Từ khóa tìm kiếm (Hỗ trợ SEO) -->
+    <meta name="keywords" content="tuyển dụng, edtech, việc làm IT, HTML, CSS">
+
+    <!-- 5. Tên tác giả/Nhóm phát triển (Chứng minh quyền sở hữu của nhóm bạn) -->
+    <meta name="author" content="Nhóm 4 - Lớp Web Dev Thứ 3">
+
+    <!-- Tiêu đề trang web hiển thị trên tab trình duyệt -->
+    <title>Trang Chủ | Công Ty EdTech Group 4</title>
+</head>
+<body>
+ <strong>: Indicates important text. It is usually displayed in bold.
+<em>: Indicates emphasis. It is usually displayed in italics.
+    <sub>: Displays text as a subscript (lowered). Commonly used for chemical formulas.
+    <sup>: Displays text as a superscript (raised). Commonly used for exponents and footnotes.
+Example:
+Formula: H2O
+Exponent: (x + y)2
+
+<p> 5 &lt; 10</p>
+Output: 5 < 10
+<p> 10 &gt; 20</p>
+Output: 10 > 20
+<p>Tom &amp; Jerry</p>
+Output: Tom & Jerry
+<p> &copy; 2025 All Rights Reserved.</p>
+Output: © 2025 All Rights Reserved.
+<ol> <!-- ordered list -->
+    <li>Wake up</li>
+    <li>Brush your teeth</li>
+    <li>Have breakfast</li>
+</ol>
+
+<ul> <!-- unordered list -->
+    <li>Milk</li>
+    <li>Bread</li>
+    <li>Eggs</li>
+</ul>
+<dl> <!-- definition list -->
+    <dt>HTML</dt>
+    <dd>HyperText Markup Language</dd>
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets</dd>
+</dl>
+
+  <ol> <!-- nested list -->
+    <li>Wake up</li>
+    <li>Get ready
+        <ul>
+            <li>Brush your teeth</li>
+            <li>Take a shower</li>
+            <li>Get dressed</li>
+        </ul>
+    </li>
+    <li>Have breakfast
+        <ul>
+            <li>Eat cereal</li>
+            <li>Drink coffee</li>
+        </ul>
+    </li>
+    <li>Leave for work</li>
+</ol>
+
+<table> - Defines the table.
+<caption> - Provides a title for the table.
+<tr> - Defines a table row.
+<th> - Defines a table header cell.
+<td> - Defines a table data cell.
+<thead>, <tbody>, <tfoot> - Organises table structure.
+
+<table>
+    <caption>Student Grades Table</caption>
+    
+    <thead>
+      <tr>
+        <th>Student Name</th>
+        <th>Subject</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>Mathematics</td>
+        <td>A</td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>Science</td>
+        <td>B</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td colspan="2"><strong>Average Grade</strong></td>
+        <td>B+</td>
+      </tr>
+    </tfoot>
+</table>
+
+ <img src="image.jpg" alt="Description of the image">
+<img src="scenery.jpg" alt="A beautiful sunrise over the mountains">
+<img src="scenery.jpg" title="This is a beautiful scenery"> <!-- title = tooltip displayed when user hovers -->
+<img src="scenery.jpg" loading="lazy">
+    <img src="scenery.jpg" 
+         alt="A beautiful sunrise over the mountains" 
+         title="Sunrise scenery"
+         loading="lazy"
+         >
+    
+<!-- Basic link -->
+<a href="jobs.html">Jobs</a>
+
+<!-- External website -->
+<a href="https://example.com">Visit Website</a>
+
+<!-- Open in new tab -->
+<a href="https://example.com" target="_blank">
+    Visit Website
+</a>
+
+<!-- Open in current tab -->
+<a href="https://example.com" target="_self">
+    Visit Website
+</a>
+
+<!-- Tooltip -->
+<a href="about.html" title="Learn more about us">
+    About
+</a>
+
+<!-- Download -->
+<a href="document.pdf" download>
+    Download PDF
+</a>
+
+<!-- Link to section on same page -->
+<a href="#about">About</a>
+
+<section id="about">
+    <h2>About Us</h2>
+</section>
+
+<!-- Email -->
+<a href="mailto:example@email.com">
+    Send an Email
+</a>
+
+<form action="submit.php" method="post">
+    <fieldset>
+        <legend>User Information</legend>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+        
+        <label>Preferred Contact Method:</label>
+        <br>
+        <input type="radio" id="email" name="contact" value="email">
+        <label for="email">Email</label>
+        
+        <input type="radio" id="phone" name="contact" value="phone">
+        <label for="phone">Phone</label>
+        <br>
+        
+        <label>
+            <input type="checkbox" name="subscribe"> Subscribe to newsletter
+        </label>
+        <br>
+        
+        <label for="comments">Comments:</label>
+        <br>
+        <textarea id="comments" name="comments" rows="4" cols="30"></textarea>
+        <br>
+        
+        <input type="submit" value="Register">
+    </fieldset>
+</form>
+  
+<style>
+  nav ul { /* it can be ul.nav as well */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  ul.nav li {
+    display: inline; /* Display list items in a horizontal line */
+    margin-right: 20px; /* Add some spacing between items */
+  }
+
+  ul.nav li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+  }
+</style>
+
+<ul class="nav">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+
+
+
+
+</body>
+
+<footer> <!-- for content that is typically at the bottom of the page. It often includes information like copyright notices, contact details, and other links that are less critical than the content in the <main> tag. -->
+  <p> &copy; 2025 My Website. All rights reserved.</p>
+  <a href="#privacy">Privacy Policy</a>
+</footer>
+
+
+</html>
+

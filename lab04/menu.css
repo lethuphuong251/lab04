@@ -1,0 +1,41 @@
+/*!--Example 1: Setting a Simple Background Image--*/
+div {
+  background-image: url('https://example.com/background.jpg');
+  height: 400px; /* Height of the div */
+  background-size: cover; /* Ensures the image covers the div fully */
+}
+
+/*!--Example 2: Controlling the Background Position--*/
+div {
+  background-image: url('https://example.com/background.jpg');
+  height: 400px;
+  background-size: cover;
+  background-position: center; /* Positions the image in the center */
+}
+
+/*!--Example 3: Using Multiple Background Images--*/
+div {
+  background-image: url('https://example.com/background1.jpg'), url('https://example.com/background2.png');
+  background-position: center, top right;
+  background-size: cover, auto;
+  height: 400px;
+}
+
+/*!--Example 4: Repeating Background Images--*/
+div {
+  background-image: url('https://example.com/tile-pattern.jpg');
+  background-repeat: no-repeat; /* Prevents repeating */
+  background-size: 100px 100px; /* Scales the image */
+  height: 400px;
+}
+
+/*!--Example 5: Full-Page Background Image--*/
+body {
+  background-image: url('https://example.com/fullpage-background.jpg');
+  background-size: cover; /* Makes the image cover the entire page */
+  background-position: center; /* Centers the image */
+  height: 100vh; /* Makes the body take the full height of the viewport */
+  margin: 0; /* Removes default margin */
+}
+
+

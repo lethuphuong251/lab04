@@ -1,0 +1,110 @@
+/* Two-column layout */
+.impact-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+
+    background-color: #eef1ff;
+}
+
+/* LEFT: Slider */
+.slider {
+    flex: 3;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 40px;
+    position: relative;
+}
+
+.slider input {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    width: 33.3333%;
+    height: 470px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+/* Change images without JavaScript */
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-33.3333%);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-66.6667%);
+}
+
+/* Dots */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    padding: 15px;
+}
+
+.dots label {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #3933b5;
+    cursor: pointer;
+}
+
+/* RIGHT: Text */
+.impact-content {
+    flex: 2;
+    min-width: 0;
+}
+
+.impact-content h2 {
+    margin-top: 20px;
+    color: #3933b5;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.impact-content p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 22px;
+}
+
+/* Responsive layout for mobile */
+@media screen and (max-width: 768px) {
+    .impact-section {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .slider,
+    .impact-content {
+        width: 100%;
+        flex: auto;
+    }
+
+    .slides img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .impact-content h2 {
+        font-size: 26px;
+    }
+}
